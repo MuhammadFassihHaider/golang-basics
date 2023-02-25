@@ -10,14 +10,16 @@ import (
 func deferPanicAndRecovery() {
 	fmt.Println("deferPanicAndRecovery")
 
-	// deferring()
-	// deferring2()
-	// callingAnAPI()
-	// callingAnAPI2()
-	// deferring3()
-	// simplePanic()
-	// aSimpleWebServer()
+	deferring()
+	deferring2()
+	callingAnAPI()
+	callingAnAPI2()
+	deferring3()
+	simplePanic()
+	aSimpleWebServer()
 	panicAndDefer()
+	recovering()
+	fmt.Println("I ran after recovering")
 }
 
 func deferring() {
@@ -112,4 +114,27 @@ func panicAndDefer() {
 		Middle
 		Panic
 	*/
+}
+
+func recovering() {
+	/*
+		Because the deferred function will be run just before
+		the panic is bubbled upwards, we can recover/handle from the
+		error.
+
+		The execution stops in this function when we panic but 'deferPanicAndRecovery'
+		still runs
+	*/
+	fmt.Println("Start")
+	// anonymous function
+	defer func() {
+		if err := recover(); err != nil {
+			log.Println(err)
+			// if we find the error to be something that we cannot deal with, we can panic
+			// again
+			// panic("panicked again")
+		}
+	}()
+	panic("Something horrible happened")
+	fmt.Println("End")
 }
