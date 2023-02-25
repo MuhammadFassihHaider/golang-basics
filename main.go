@@ -8,6 +8,6 @@ func main() {
 	// mapsAndStructs()
 	// ifAndSwitch()
 	// looping()
-	// pointers()
-	deferPanicAndRecovery()
+	// deferPanicAndRecovery()
+	pointers()
 }
