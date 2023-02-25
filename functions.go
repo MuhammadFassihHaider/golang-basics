@@ -112,7 +112,8 @@ func methods() {
 
 func (g greeter) greet() {
 	/*
-		This is a method
+		Here 'g' is called as the 'receiver'.
+		The function is called a receiver function / method
 	*/
 	fmt.Println(g.greeting, ",", g.name)
 }
