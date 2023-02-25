@@ -9,5 +9,6 @@ func main() {
 	// ifAndSwitch()
 	// looping()
 	// deferPanicAndRecovery()
-	pointers()
+	// pointers()
+	functions()
 }
