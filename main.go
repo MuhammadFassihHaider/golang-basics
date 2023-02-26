@@ -10,5 +10,6 @@ func main() {
 	// looping()
 	// deferPanicAndRecovery()
 	// pointers()
-	functions()
+	// functions()
+	interfaces()
 }
