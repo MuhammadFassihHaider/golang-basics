@@ -11,5 +11,6 @@ func main() {
 	// deferPanicAndRecovery()
 	// pointers()
 	// functions()
-	interfaces()
+	// interfaces()
+	goRoutines()
 }
